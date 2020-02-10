@@ -1,0 +1,27 @@
+{
+    "data": [
+        {
+            "nome": "coca cola",
+            "descricao": "cocaaa ",
+            "preco": 8,
+            "categoria": "refrigerantes",
+            "urlImagem": "https://i.ytimg.com/vi/d5X2rJNhwxk/hqdefault.jpg"
+        },
+        {
+            "nome": "Dolly",
+            "descricao": "dolly guarana ",
+            "preco": 8,
+            "categoria": "refrigerantes",
+            "urlImagem": "https://i.ytimg.com/vi/d5X2rJNhwxk/hqdefault.jpg"
+        },
+        {
+            "nome": "Ovo",
+            "descricao": "Ovao",
+            "preco": 8,
+            "categoria": "comida",
+            "urlImagem": "https://i.ytimg.com/vi/d5X2rJNhwxk/hqdefault.jpg"
+        }
+    ],
+
+    "categorias":[]
+}
