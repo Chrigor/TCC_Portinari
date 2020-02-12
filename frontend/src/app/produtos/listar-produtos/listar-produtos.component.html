@@ -1,2 +1,14 @@
 
-  <p>Listar produto</p>
+<div id="containerProdutos">
+  <ol>
+    <li class="produto" *ngFor="let produto of products">
+      <div>
+        <img src={{produto.urlImagem}} alt="" srcset="">
+        <p>Nome: {{produto.nome}}</p>
+        <p>Descrição: {{produto.descricao}}</p>
+        <p>Preco: R${{produto.preco}}</p>  
+        <p>Categoria: {{produto.categoria}}</p>     
+      </div>
+    </li>
+  </ol>
+</div>

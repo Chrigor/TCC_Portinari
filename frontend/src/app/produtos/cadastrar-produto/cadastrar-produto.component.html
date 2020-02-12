@@ -1,1 +1,26 @@
-<p>cadastrar-produto works!</p>
+<form>
+  <label for="nameProduct">Nome</label>
+  <po-input p-required="true" p-auto-focus="true" name="nameProduct" id="nameProduct">
+
+  </po-input>
+
+  <label for="descricaoProduct">Descricao</label>
+  <po-input p-required="true" name="descricaoProduct" id="descricaoProduct">
+  </po-input>
+
+  <label for="">Preço</label>
+  <po-input p-required="true" name="precoProduct" id="precoProduct">
+  </po-input>
+
+  <po-select name="select" p-label="Categoria"
+    [p-options]="[{label: 'Selecione uma opção', value: ''},{label: 'Option 1', value: '1'}, {label: 'Option 2', value: '2'}]">
+  </po-select>
+
+  <label for="">URL da imagem</label>
+  <po-input p-required="true" name="urlProduct" id="urlProduct">
+  </po-input>
+
+  <po-button p-label="Cadastrar" (p-click)="onClick()">
+  </po-button>
+
+</form>

@@ -1,1 +1,16 @@
-<p>cadastrar-categoria works!</p>
+<form>
+
+  <label for="">Digite o nome da sua nova categoria</label>
+  <po-input
+    p-auto-focus="true"
+    p-placeholder="Digite 'Comida' por exemplo..."
+    p-required="true" >
+</po-input>
+
+<po-button
+    (p-click)="cadastrarCategoria()"
+    p-label="Cadastrar"
+    p-type="string" >
+</po-button>
+
+</form>

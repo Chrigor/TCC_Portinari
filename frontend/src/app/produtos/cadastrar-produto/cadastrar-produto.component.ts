@@ -12,4 +12,8 @@ export class CadastrarProdutoComponent implements OnInit {
   ngOnInit() {
   }
 
+  private onClick(){
+    console.log('OPA');
+  }
+
 }

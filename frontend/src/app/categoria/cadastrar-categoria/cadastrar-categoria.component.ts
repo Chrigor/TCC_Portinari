@@ -12,4 +12,7 @@ export class CadastrarCategoriaComponent implements OnInit {
   ngOnInit() {
   }
 
+  cadastrarCategoria(){
+    console.log('opaaaa');
+  }
 }
