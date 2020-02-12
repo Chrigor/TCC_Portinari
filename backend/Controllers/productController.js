@@ -50,6 +50,7 @@ function _getProductsByCategory(categoria = "") {
     return produtosCategoria;
 
 }
+
 module.exports = {
     getAllProducts(req, res) {
         try {
