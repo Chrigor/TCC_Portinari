@@ -1,14 +1,32 @@
+<div class="po-row">
+  <div class="po-md-3">
+    <po-radio-group name="radioGroupBasic" p-label="Filtro" [p-options]="categorias">
+    </po-radio-group>
+  </div>
+</div>
 
-<div id="containerProdutos">
-  <ol>
-    <li class="produto" *ngFor="let produto of products">
-      <div>
-        <img src={{produto.urlImagem}} alt="" srcset="">
-        <p>Nome: {{produto.nome}}</p>
-        <p>Descrição: {{produto.descricao}}</p>
-        <p>Preco: R${{produto.preco}}</p>  
-        <p>Categoria: {{produto.categoria}}</p>     
-      </div>
-    </li>
-  </ol>
+<po-modal #modal p-title="Portinari Modal" [p-secondary-action]="close">
+  We are TOTVERS!!!
+
+  <po-slide [p-slides]="produtoAtual.imagensProduto">
+  </po-slide>
+  <img [src]="produtoAtual.urlImagem"/>
+</po-modal>
+
+<div id="containerProdutos" class="po-row">
+  <div class="po-md-12">
+    <ol>
+      <li class="produto" *ngFor="let produto of products">
+        <div>
+          <img src={{produto.urlImagem}} alt="" srcset="">
+          <p>Nome: {{produto.nome}}</p>
+          <p>Descrição: {{produto.descricao}}</p>
+          <p>Preco: R${{produto.preco}}</p>
+          <p>Categoria: {{produto.categoria}}</p>
+          <po-button p-label="Ver mais" (p-click)="setProduto(produto,modal);">
+          </po-button>
+        </div>
+      </li>
+    </ol>
+  </div>
 </div>

@@ -4,6 +4,7 @@ import { PoModule } from '@portinari/portinari-ui';
 import { ListarProdutosComponent } from './listar-produtos/listar-produtos.component';
 import { CadastrarProdutoComponent } from './cadastrar-produto/cadastrar-produto.component';
 import { PoFieldModule } from '@portinari/portinari-ui';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { PoFieldModule } from '@portinari/portinari-ui';
   imports: [
     CommonModule,
     PoModule,
-    PoFieldModule
+    PoFieldModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     CadastrarProdutoComponent,

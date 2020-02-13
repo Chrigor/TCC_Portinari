@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { PoMenuItem } from '@portinari/portinari-ui';
 
 @Component({
@@ -9,10 +8,17 @@ import { PoMenuItem } from '@portinari/portinari-ui';
 })
 export class AppComponent {
 
+  readonly itensMenu = [
+    { label: "Inicio", link: "/" },
+    { label: 'Listar produtos', link: 'listarProdutos' },
+    { label: 'Cadastrar Categoria', link: 'cadastrarCategoria' },
+    { label: 'Cadastrar Produto', link: 'cadastrarProduto' }
+  ]
+
   readonly menus: Array<PoMenuItem> = [
-    { label: 'Listar produtos', link:'listarProdutos'},
-    { label: 'Cadastrar Categoria', link:'cadastrarCategoria'},
-    { label: 'Cadastrar Produto', link:'cadastrarProduto'}
+    { label: 'Listar produtos', link: 'listarProdutos' },
+    { label: 'Cadastrar Categoria', link: 'cadastrarCategoria' },
+    { label: 'Cadastrar Produto', link: 'cadastrarProduto' }
   ];
 
 }

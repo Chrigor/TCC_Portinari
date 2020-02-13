@@ -9,8 +9,8 @@
   </po-input>
 
   <label for="">Preço</label>
-  <po-input p-required="true" name="precoProduct" id="precoProduct">
-  </po-input>
+  <po-decimal name="precoProduct">
+  </po-decimal>
 
   <po-select name="select" p-label="Categoria"
     [p-options]="[{label: 'Selecione uma opção', value: ''},{label: 'Option 1', value: '1'}, {label: 'Option 2', value: '2'}]">
