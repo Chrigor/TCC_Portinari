@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarProdutoComponent implements OnInit {
 
+  categoria: string;
+  categoriasCadastradas:string[];
+
   constructor() { }
 
   ngOnInit() {
-  }
-
-  private onClick(){
-    console.log('OPA');
+  
   }
 
 }

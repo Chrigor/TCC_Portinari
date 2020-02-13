@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PoModule } from '@portinari/portinari-ui';
 import { RouterModule } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
 
 import { ProdutosModule } from './produtos/produtos.module';
 import { CategoriaModule } from './categoria/categoria.module';
@@ -21,6 +22,7 @@ import { PoModalModule } from '@portinari/portinari-ui';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     PoModule,
     BrowserAnimationsModule,
     PoNavbarModule,
