@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoriaService } from '../../categoria/categoria.service';
+import { ProdutosService } from '../produtos.service';
 
 @Component({
   selector: 'app-cadastrar-produto',
@@ -8,12 +10,40 @@ import { Component, OnInit } from '@angular/core';
 export class CadastrarProdutoComponent implements OnInit {
 
   categoria: string;
-  categoriasCadastradas:string[];
+  categoriasCadastradas: string[];
 
-  constructor() { }
+  nome: string;
+  descricao: string;
+  preco: number;
+  categoriaProduto: string;
+  urlImagem: string;
 
-  ngOnInit() {
-  
+
+  constructor(private categoriaService: CategoriaService, private produtosService: ProdutosService) {
   }
 
+  ngOnInit() {
+    this.getAllCategorias();
+  }
+
+
+  getAllCategorias() {
+    this.categoriaService.getAllCategorias().subscribe((res: any) => {
+      var options = res.categorias.map((elemento) => { return { value: elemento.toString().toLowerCase(), label: elemento.toString().toLowerCase() } });
+      this.categoriasCadastradas = options;
+    });
+  }
+
+  cadastrarProduto() {
+
+    let { nome, descricao, preco, categoriaProduto:categoria, urlImagem } = this;
+
+    this.produtosService.cadastrarProduto({ nome, descricao, preco, categoria, urlImagem }).subscribe((res: any) => {
+      console.log(res);
+    })
+  }
 }
+
+
+
+

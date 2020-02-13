@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { PoModalAction, PoModalComponent } from '@portinari/portinari-ui';
 import { ProdutosService } from '../produtos.service';
+import { CategoriaService } from '../../categoria/categoria.service';
 
 @Component({
   selector: 'app-listar-produtos',
@@ -14,7 +15,7 @@ export class ListarProdutosComponent implements OnInit {
   categorias: any[];
   produtoAtual: Object;
 
-  constructor(private produtosService: ProdutosService) {
+  constructor(private produtosService: ProdutosService, private categoriaService: CategoriaService) {
     this.title = "Listar";
     this.categorias = [
       { value: 'Todos', label: 'Todos' },
@@ -36,6 +37,7 @@ export class ListarProdutosComponent implements OnInit {
 
   ngOnInit() {
     this.getAllProducts();
+    this.getAllCategorias();
   }
 
   setProduto(produto, modal) {
@@ -67,4 +69,11 @@ export class ListarProdutosComponent implements OnInit {
     });
   }
 
+
+  getAllCategorias() {
+    this.categoriaService.getAllCategorias().subscribe((res: any) => {
+      var options = res.categorias.map((elemento) => { return {value: elemento, label:elemento} });
+      this.categorias = options;
+    });
+  }
 }

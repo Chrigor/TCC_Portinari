@@ -19,4 +19,8 @@ export class ProdutosService {
   getProdutosCategoria(categoria:string){
     return this.http.get(`${this.api}/categoria/${categoria}`);
   }
+
+  cadastrarProduto(produto:Object){
+    return this.http.post(`${this.api}`, produto);
+  }
 }

@@ -1,26 +1,26 @@
 <form>
   <label for="nameProduct">Nome</label>
-  <po-input p-required="true" p-auto-focus="true" name="nameProduct" id="nameProduct">
+  <po-input p-required="true" p-auto-focus="true" name="nameProduct" id="nameProduct" [(ngModel)]="nome">
 
   </po-input>
 
   <label for="descricaoProduct">Descricao</label>
-  <po-input p-required="true" name="descricaoProduct" id="descricaoProduct">
+  <po-input p-required="true" name="descricaoProduct" id="descricaoProduct" [(ngModel)]="descricao">
   </po-input>
 
   <label for="">Preço</label>
-  <po-decimal name="precoProduct">
+  <po-decimal name="precoProduct" [(ngModel)]="preco">
   </po-decimal>
 
   <po-select name="select" p-label="Categoria"
-    [p-options]="[{label: 'Selecione uma opção', value: ''},{label: 'Option 1', value: '1'}, {label: 'Option 2', value: '2'}]">
+    [p-options]="categoriasCadastradas" [(ngModel)]="categoriaProduto">
   </po-select>
 
   <label for="">URL da imagem</label>
-  <po-input p-required="true" name="urlProduct" id="urlProduct">
+  <po-input p-required="true" name="urlProduct" id="urlProduct" [(ngModel)]="urlImagem">
   </po-input>
 
-  <po-button p-label="Cadastrar" (p-click)="onClick()">
+  <po-button p-label="Cadastrar" (p-click)="cadastrarProduto()">
   </po-button>
 
 </form>
