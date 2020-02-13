@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoriaService } from '../categoria.service';
 
 @Component({
   selector: 'app-cadastrar-categoria',
@@ -7,12 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarCategoriaComponent implements OnInit {
 
-  constructor() { }
+  categoria: string = ""
+
+  constructor(private categoriaService: CategoriaService) { }
 
   ngOnInit() {
   }
 
-  cadastrarCategoria(){
-    console.log('opaaaa');
+  cadastrarCategoria() {
+
+    this.categoriaService.cadastrarCategoria(this.categoria).subscribe((res: any) => {
+      console.log(res);
+    });
+
   }
+
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CadastrarCategoriaComponent } from './cadastrar-categoria/cadastrar-categoria.component';
 import { PoFieldModule } from '@portinari/portinari-ui';
 import { PoModule } from '@portinari/portinari-ui';
+import { FormsModule, FormControl } from '@angular/forms';
 
 
 @NgModule({
@@ -10,7 +11,9 @@ import { PoModule } from '@portinari/portinari-ui';
   imports: [
     CommonModule,
     PoModule,
-    PoFieldModule
+    PoFieldModule,
+    FormsModule,
   ]
 })
-export class CategoriaModule { }
+export class CategoriaModule { 
+}

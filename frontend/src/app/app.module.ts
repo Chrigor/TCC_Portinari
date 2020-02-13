@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, FormControl } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { PoNavbarModule } from '@portinari/portinari-ui';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { PoModalModule } from '@portinari/portinari-ui';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { PoModalModule } from '@portinari/portinari-ui';
     ProdutosModule,
     CategoriaModule,
     PoModalModule,
+    FormsModule,
     RouterModule.forRoot([])
   ],
   providers: [],
