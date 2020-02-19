@@ -13,6 +13,10 @@
   margin: 5px 10px;
 }
 
+.produto p {
+  margin:3px;
+}
+
 .produto img {
   width: 270px;
   height: 200px;

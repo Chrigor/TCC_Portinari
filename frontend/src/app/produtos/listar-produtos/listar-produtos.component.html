@@ -5,18 +5,6 @@
   </div>
 </div>
 
-<po-modal #modal p-title="Portinari Modal">
-  <div class="po-row">
-    <div class="po-md-12">
-      We are TOTVERS!!!
-
-      <po-slide [p-slides]="produtoAtual.imagensProduto">
-      </po-slide>
-      <img [src]="produtoAtual.urlImagem" />
-    </div>
-  </div>
-</po-modal>
-
 
 <div id="containerProdutos" class="po-row">
   <div class="po-md-12">
@@ -28,8 +16,6 @@
           <p>Descrição: {{produto.descricao}}</p>
           <p>Preco: R${{produto.preco}}</p>
           <p>Categoria: {{produto.categoria}}</p>
-          <po-button p-label="Ver mais" (p-click)="setProduto(produto,modal);">
-          </po-button>
         </div>
       </li>
     </ol>
